@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AviaCore Dynamics</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased">
+
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 bg-gray-900/80 backdrop-blur-sm shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold flex items-center space-x-2"><i class="fas fa-paper-plane text-cyan-400"></i><span>AviaCore Dynamics</span></a>
+            <div class="hidden md:flex space-x-8 items-center"><a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a><a href="services.html" class="hover:text-cyan-400 transition-colors">Services</a><a href="about.html" class="text-cyan-400 font-semibold">About</a><a href="mailto:Sales@AviaCoreDynamics.org" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition-colors">Contact Us</a></div>
+            <div class="md:hidden"><button id="menu-btn" class="text-white focus:outline-none"><i class="fas fa-bars text-2xl"></i></button></div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 flex-col items-center space-y-4 py-6"><a href="index.html" class="block text-white hover:text-cyan-400">Home</a><a href="services.html" class="block text-white hover:text-cyan-400">Services</a><a href="about.html" class="block text-white hover:text-cyan-400">About</a><a href="mailto:Sales@AviaCoreDynamics.org" class="block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition-colors">Contact Us</a></div>
+    </header>
+
+    <main>
+        <section class="glass-header relative flex items-center justify-center min-h-[50vh] pt-24 pb-12">
+            <div class="glass-panel text-center wow animate__animated animate__fadeIn">
+                <h1 class="text-5xl md:text-7xl font-extrabold">Our Story</h1>
+                <p class="mt-4 text-lg md:text-xl text-cyan-300">Forged in Precision, Driven by Reliability.</p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 wow animate__animated animate__fadeInLeft">
+                    <img src="images/8.jpg" alt="AviaCore Dynamics facility" class="rounded-lg shadow-2xl w-full">
+                </div>
+                <div class="md:w-1/2 wow animate__animated animate__fadeInRight" data-wow-delay="0.2s">
+                    <h2 class="text-4xl font-bold mb-4">From Vision to Velocity</h2>
+                    <p class="text-gray-300 mb-4">AviaCore Dynamics was founded on a simple, yet powerful principle: to provide mission-critical components that our clients can trust implicitly. In industries where performance is measured in microns and milliseconds, we saw the need for a partner who shared that obsession with precision.</p>
+                    <p class="text-gray-300">We began by engineering solutions for the demanding aerospace sector and have since expanded our expertise to serve military, heavy equipment, and industrial markets with the same unwavering commitment to quality and innovation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-10">
+                <div class="md:w-1/3 text-center wow animate__animated animate__zoomIn">
+                    <img src="images/9.jpg" alt="CEO Alexa Algiere" class="rounded-full w-48 h-48 mx-auto shadow-lg border-4 border-cyan-500">
+                    <h3 class="text-3xl font-bold mt-6">Alexa Algiere</h3>
+                    <p class="text-cyan-400">Founder & CEO</p>
+                </div>
+                <div class="md:w-1/2 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    <i class="fas fa-quote-left text-4xl text-gray-600 mb-4"></i>
+                    <p class="text-2xl italic text-gray-200 leading-relaxed">"Reliability isn't just a metric; it's our promise. We build every component as if lives depend on it—because often, they do. Our clients' success is the ultimate measure of our own."</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold wow animate__animated animate__fadeInUp">Our Journey of Innovation</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item wow animate__animated animate__fadeInUp">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2018 - The Genesis</h3>
+                            <p>AviaCore Dynamics is founded by Alexa Algiere with a focus on specialized aerospace components.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item wow animate__animated animate__fadeInUp">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2020 - Defense Sector Expansion</h3>
+                            <p>Awarded our first major military contract, expanding our services into defense assemblies.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item wow animate__animated animate__fadeInUp">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2022 - ISO 9001 Certification</h3>
+                            <p>Achieved ISO 9001 certification, cementing our commitment to the highest quality standards.</p>
+                        </div>
+                    </div>
+                     <div class="timeline-item wow animate__animated animate__fadeInUp">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2024 - Heavy Equipment Division</h3>
+                            <p>Launched a new division dedicated to providing durable components for heavy industrial machinery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-800">
+            <div class="cta-section container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-4 wow animate__animated animate__fadeInUp">See Our Expertise in Action</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Explore our comprehensive range of services and discover how we can elevate your next project with our precision-engineered solutions.</p>
+                <a href="services.html" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-transform hover:scale-105 wow animate__animated animate__pulse" data-wow-delay="0.4s">View Our Services</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 border-t border-gray-700 py-10">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <div class="mb-4"><a href="index.html" class="text-xl font-bold flex items-center justify-center space-x-2 text-white"><i class="fas fa-paper-plane text-cyan-400"></i><span>AviaCore Dynamics</span></a></div>
+            <p class="mb-4">High Reliability Components & Assemblies.</p>
+            
+            <p>&copy; 2025 AviaCore Dynamics. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Contact Sales: <a href="mailto:Sales@AviaCoreDynamics.org" class="text-cyan-400 hover:underline">Sales@AviaCoreDynamics.org</a></p>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

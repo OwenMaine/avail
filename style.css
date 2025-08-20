@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* --- New: Kite Grid Carousel Styles --- */
+.kite-grid {
+    position: relative;
+    width: 90%;
+    max-width: 800px; /* Control the max size */
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.grid-item {
+    background-color: #1f2937; /* bg-gray-800 */
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid #374151;
+}
+
+.central-panel {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;
+    z-index: 10;
+}
+
+.top-left-panel {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    transform: translate(-20%, -20%) rotate(-15deg);
+}
+
+.top-right-panel {
+    grid-column: 4;
+    grid-row: 1;
+    transform: translate(20%, -20%) rotate(15deg);
+}
+
+.bottom-left-panel {
+    grid-column: 1;
+    grid-row: 2;
+    transform: translate(-20%, 20%) rotate(15deg);
+}
+
+.bottom-right-panel {
+    grid-column: 4;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    transform: translate(20%, 20%) rotate(-15deg);
+}
+
+.kite-grid:hover .top-left-panel { transform: translate(-30%, -30%) rotate(-15deg) scale(1.05); }
+.kite-grid:hover .top-right-panel { transform: translate(30%, -30%) rotate(15deg) scale(1.05); }
+.kite-grid:hover .bottom-left-panel { transform: translate(-30%, 30%) rotate(15deg) scale(1.05); }
+.kite-grid:hover .bottom-right-panel { transform: translate(30%, 30%) rotate(-15deg) scale(1.05); }
+.kite-grid:hover .central-panel { transform: scale(1.05); z-index: 20; }
+
+/* --- Service Card Styles (Unchanged) --- */
+.service-card {
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 1px solid #374151; /* border-gray-700 */
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+}
+
+.service-card .service-icon {
+    font-size: 2.5rem;
+    color: #22d3ee; /* text-cyan-400 */
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.1), transparent 30%);
+    transform: rotate(0deg);
+    transition: transform 0.8s ease;
+    z-index: 0;
+}
+
+.service-card:hover::before {
+    transform: rotate(360deg);
+}
+
+.service-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Add these new styles to your existing style.css file --- */
+
+/* --- Unique Page Header Styles --- */
+.page-header {
+    background-color: #111827; /* bg-gray-900 */
+}
+.header-panel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 150%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.1;
+    transform-origin: top left;
+    transform: skewX(-25deg) translateX(-50%);
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+.header-panel.panel-1 {
+    background-image: url('images/1.jpg');
+    z-index: 3;
+    left: -20%;
+}
+.header-panel.panel-2 {
+    background-image: url('images/4.jpg');
+    z-index: 2;
+    left: -10%;
+}
+.header-panel.panel-3 {
+    background-image: url('images/7.jpg');
+    z-index: 1;
+    left: 0%;
+}
+
+/* --- Service Detail Card Styles --- */
+.service-detail-card {
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 1px solid #374151; /* border-gray-700 */
+    border-radius: 0.5rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+.service-detail-card:hover {
+    transform: translateY(-10px);
+    border-color: #22d3ee; /* cyan-400 */
+    box-shadow: 0 10px 30px rgba(34, 211, 238, 0.1);
+}
+
+.service-detail-card i {
+    font-size: 2rem;
+    color: #22d3ee; /* cyan-400 */
+    margin-bottom: 1rem;
+    display: block;
+}
+.service-detail-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.service-detail-card p {
+    color: #9ca3af; /* gray-400 */
+    line-height: 1.6;
+}
+
+/* --- CTA Section Style --- */
+.cta-section {
+    background: url('images/6.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 4rem 1.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(17, 24, 39, 0.8); /* bg-gray-900 with opacity */
+    z-index: 0;
+}
+.cta-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* --- Add these new styles to your existing style.css file --- */
+
+/* --- Glassmorphism Header --- */
+.glass-header {
+    background: url('images/10.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Creates a nice parallax effect */
+}
+
+.glass-panel {
+    background: rgba(17, 24, 39, 0.25); /* bg-gray-900 with low opacity */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border-radius: 1rem;
+    padding: 3rem 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+
+/* --- Timeline Section --- */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* The vertical line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #374151; /* border-gray-700 */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+
+/* The dot on the timeline */
+.timeline-dot {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: #fff;
+    border: 4px solid #22d3ee; /* cyan-400 */
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Position items to the left */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 60px; /* Space from center line */
+}
+
+/* Position items to the right */
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 60px; /* Space from center line */
+}
+
+/* Adjust dot for right-side items */
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -10px;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: #1f2937; /* bg-gray-800 */
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #374151;
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: scale(1.03);
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #22d3ee; /* cyan-400 */
+}
+
+/* Responsive adjustments for the timeline on mobile */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 15px;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 10px;
+    }
+}
+
+
+
+
+/* --- Add these new styles to your existing style.css file --- */
+
+/* --- Signal Pulse Header --- */
+.signal-header {
+    background-color: #111827; /* bg-gray-900 */
+}
+.signal-wave {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid rgba(34, 211, 238, 0.5); /* cyan-400 with opacity */
+    animation: pulse 3s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+
+/* --- Contact Form Styles --- */
+.contact-input {
+    width: 100%;
+    background-color: #374151; /* bg-gray-700 */
+    border: 1px solid #4b5563; /* border-gray-600 */
+    color: #fff;
+    border-radius: 0.375rem; /* rounded-md */
+    padding: 0.75rem 1rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.contact-input:focus {
+    outline: none;
+    border-color: #22d3ee; /* cyan-400 */
+    box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.3);
+}
+
+.contact-input::placeholder {
+    color: #9ca3af; /* text-gray-400 */
+}
+
+

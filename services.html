@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - AviaCore Dynamics</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased">
+
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 bg-gray-900/80 backdrop-blur-sm shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold flex items-center space-x-2"><i class="fas fa-paper-plane text-cyan-400"></i><span>AviaCore Dynamics</span></a>
+            <div class="hidden md:flex space-x-8 items-center"><a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a><a href="services.html" class="text-cyan-400 font-semibold">Services</a><a href="about.html" class="hover:text-cyan-400 transition-colors">About</a><a href="mailto:Sales@AviaCoreDynamics.org" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition-colors">Contact Us</a></div>
+            <div class="md:hidden"><button id="menu-btn" class="text-white focus:outline-none"><i class="fas fa-bars text-2xl"></i></button></div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 flex-col items-center space-y-4 py-6"><a href="index.html" class="block text-white hover:text-cyan-400">Home</a><a href="services.html" class="block text-white hover:text-cyan-400">Services</a><a href="#" class="block text-white hover:text-cyan-400">About</a><a href="mailto:Sales@AviaCoreDynamics.org" class="block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition-colors">Contact Us</a></div>
+    </header>
+
+    <main>
+        <section class="page-header relative pt-48 pb-24 overflow-hidden">
+            <div class="header-panel panel-1 wow animate__animated animate__fadeInLeft" data-wow-delay="0.1s"></div>
+            <div class="header-panel panel-2 wow animate__animated animate__fadeInLeft" data-wow-delay="0.3s"></div>
+            <div class="header-panel panel-3 wow animate__animated animate__fadeInLeft" data-wow-delay="0.5s"></div>
+            
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 wow animate__animated animate__zoomIn">Our Core Services</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-300 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Precision-engineered components and assemblies for industries where failure is not an option.</p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 space-y-20">
+                
+                <div class="wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
+                    <div class="flex items-center gap-4 mb-8">
+                        <i class="fas fa-plane-departure text-4xl text-cyan-400"></i>
+                        <h2 class="text-4xl font-bold">Aviation & Aerospace</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="service-detail-card"><i class="fas fa-cogs"></i><h3>Actuation Systems</h3><p>Precision gears, housings, and assemblies for flight control and landing gear systems.</p></div>
+                        <div class="service-detail-card"><i class="fas fa-fan"></i><h3>Engine Components</h3><p>Turbine blades, vanes, and high-temperature alloy parts manufactured to exacting tolerances.</p></div>
+                        <div class="service-detail-card"><i class="fas fa-satellite-dish"></i><h3>Avionics Housing</h3><p>EMI-shielded, thermally managed enclosures for critical electronic systems.</p></div>
+                    </div>
+                </div>
+
+                <div class="wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
+                    <div class="flex items-center gap-4 mb-8">
+                        <i class="fas fa-shield-halved text-4xl text-cyan-400"></i>
+                        <h2 class="text-4xl font-bold">Military & Defense</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="service-detail-card"><i class="fas fa-crosshairs"></i><h3>Guidance Systems</h3><p>High-reliability components for missile and unmanned aerial vehicle (UAV) guidance.</p></div>
+                        <div class="service-detail-card"><i class="fas fa-truck-moving"></i><h3>Armored Vehicle Parts</h3><p>Durable driveline, suspension, and chassis components for military ground vehicles.</p></div>
+                        <div class="service-detail-card"><i class="fas fa-broadcast-tower"></i><h3>Communication Assemblies</h3><p>Ruggedized connectors, mounts, and hardware for tactical communication equipment.</p></div>
+                    </div>
+                </div>
+
+                <div class="wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
+                    <div class="flex items-center gap-4 mb-8">
+                        <i class="fas fa-truck-monster text-4xl text-cyan-400"></i>
+                        <h2 class="text-4xl font-bold">Heavy Equipment</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="service-detail-card"><i class="fas fa-water"></i><h3>Hydraulic Systems</h3><p>High-pressure valve bodies, cylinder components, and fittings for hydraulic machinery.</p></div>
+                        <div class="service-detail-card"><i class="fas fa-link"></i><h3>Drivetrain Components</h3><p>Heavy-duty gears, shafts, and transmission parts for construction and mining equipment.</p></div>
+                        <div class="service-detail-card"><i class="fas fa-tractor"></i><h3>Structural Assemblies</h3><p>Custom-fabricated brackets, mounts, and structural reinforcements for extreme loads.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-800">
+            <div class="cta-section container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-4 wow animate__animated animate__fadeInUp">Have a Custom Project?</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Our engineering team is ready to collaborate with you to develop a custom solution that meets your exact specifications. Let's build the future, together.</p>
+                <a href="mailto:Sales@AviaCoreDynamics.org" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-transform hover:scale-105 wow animate__animated animate__pulse" data-wow-delay="0.4s">Request a Quote</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 border-t border-gray-700 py-10">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <div class="mb-4"><a href="index.html" class="text-xl font-bold flex items-center justify-center space-x-2 text-white"><i class="fas fa-paper-plane text-cyan-400"></i><span>AviaCore Dynamics</span></a></div>
+            <p class="mb-4">High Reliability Components & Assemblies.</p>
+            
+            <p>&copy; 2025 AviaCore Dynamics. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Contact Sales: <a href="mailto:Sales@AviaCoreDynamics.org" class="text-cyan-400 hover:underline">Sales@AviaCoreDynamics.org</a></p>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
